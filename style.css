@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  overflow: auto;
+}
+
+/* smooth scrolling *
+
+@keyframes smoothscroll1 {
+  from, to { scroll-behavior: smooth; }
+}
+
+@keyframes smoothscroll2 {
+  from, to { scroll-behavior: smooth; }
+}
+
+html {
+  animation: smoothscroll1 1s;
+}
+
+html:focus-within {
+  animation-name: smoothscroll2;
+  scroll-behavior: smooth;
+}
+/* smooth scrolling*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+
+  /*background-color: wheat;*/
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  opacity: 0.8;
+  
+}
+
+/*
+@media(max-width: 600px){
+   .navbar  {
+  flex-basis: 30%;
+}
+}
+*/
+nav ul {
+  font-family: var(sans-serif);
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.logo {
+  margin: 5px;
+  height: 50px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  /* scroll-behavior: smooth; */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(0, 132, 255);
+}
+
+.btn-position {
+  position: absolute;
+  right: 10px;
+  display: flex;
+}
+
+
+
+.btn {
+  background-color: transparent;
+  border: 0;
+  color: #fefbef;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 5px;
+  width: 100%;
+}
+
+.btn2 {
+  background-color: transparent;
+  border: 0;
+  color: #fefbef;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  width: 100%;
+  
+}
+
+/*
+@media( min-width: 150%){
+  .btn-position{
+    margin-left: 200px;
+  }
+}
+*/
+.btn:hover {
+  background-color: rgb(206, 188, 166);
+}
+
+.btn2:hover {
+  background-color: rgb(206, 188, 166);
+}
+
+/*About Section */
+#about {
+  background-color: #ffec5c;
+  padding-top: 60px;
+
+}
+
+.about-title {
+  font-size: 40px;
+  margin: 10px;
+}
+
+.about-flex {
+  display: flex;
+}
+
+.about-details {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.image-main {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+
+}
+
+/*Gallery Section */
+/*
+.gallery {
+  background-color: #b4cf66;
+}
+#gallery-title {
+  font-size: 40px;
+  margin: 20px;
+}
+*/
+#container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.container-image {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-image .gallery-image {
+  height: 800px;
+  width: 100%;
+}
+
+.gallery-image img {
+  height: 800px;
+  width: 100%;
+}
+
+.container-image .slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid white;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.container-image .slide:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+.slide span {
+  font-size: 35px;
+  color: white;
+  line-height: 0px;
+  padding: 19px;
+  margin: 0px;
+}
+
+.container-image .right {
+  right: 0;
+}
+
+.numbertext {
+  color: blue;
+  font-size: 40px;
+  padding: 11px 12px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-weight: bold;
+}
+
+/*.gallery-image:hover {
+  opacity: 0.7;
+}
+*/
+
+/*
+.image {
+  margin: 10px;
+  height: 300px;
+  width: 350px;
+}
+*/
+/*Services Section */
+#services {
+  background-color: #44803f;
+}
+
+.services-title {
+  font-size: 40px;
+  margin: 10px;
+}
+
+.services-flex {
+  display: flex;
+}
+
+/*Contact Section */
+
+#contact {
+  background-color: rgb(27, 165, 165);
+  color: black;
+}
+
+.contact-title {
+  font-size: 40px;
+  margin: 10px;
+}
+
+.contact-flex {
+  display: flex;
+}
+
+.contact-logo {
+  width: 200px;
+  height: 150px;
+  margin: 50px;
+  padding: 50px;
+}
+
+.location-flex {
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  font-size: 30px;
+}
+
+.location-logo {
+  height: 60px;
+  margin: 5px;
+}
+
+.address {
+  font-size: 25px;
+  margin: 5px;
+}
+
+.map {
+  height: 400px;
+  width: 600px;
+  margin: 5px;
+}
+
+#top-btn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: lightgoldenrodyellow;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#top-btn:hover {
+  background-color: rgb(0, 204, 255);
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.logo-flex {
+  display: flex;
+  justify-content: center;
+}
